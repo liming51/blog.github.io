@@ -6,7 +6,7 @@
   <link href="https://blog.github.io/atom.xml" rel="self"/>
   
   <link href="https://blog.github.io/"/>
-  <updated>2024-01-09T07:14:28.135Z</updated>
+  <updated>2024-01-09T09:33:39.478Z</updated>
   <id>https://blog.github.io/</id>
   
   <author>
@@ -17,11 +17,54 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="https://blog.github.io/post/0.html"/>
+    <id>https://blog.github.io/post/0.html</id>
+    <published>2024-01-09T09:33:39.106Z</published>
+    <updated>2024-01-09T09:33:39.478Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="FFMPEG安装文档"><a href="#FFMPEG安装文档" class="headerlink" title="FFMPEG安装文档"></a>FFMPEG安装文档</h1><ol><li><p>在线安装ffmpeg</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install ffmpeg</span><br></pre></td></tr></table></figure></li><li><p>离线安装</p></li></ol><p>环境要求，需要提前安装gcc++</p><p>使用gcc –version检测gcc++是否安装。如果没有安装,则运行sudo yum install g++</p><p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20240109140015377.png" alt="image-20240109140015377"></p><h2 id="下面是基于ffmpeg-6-0-1版本"><a href="#下面是基于ffmpeg-6-0-1版本" class="headerlink" title="下面是基于ffmpeg_6.0.1版本"></a>下面是基于ffmpeg_6.0.1版本</h2><ol><li><p>安装yasm源码包</p><p>第一：源码地址，</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz</span><br></pre></td></tr></table></figure><p>第二：解压yasm</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xvf yasm-1.3.0.tar.gz</span><br></pre></td></tr></table></figure><p>第三：进入解压文件,</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd yasm-1.3.0</span><br></pre></td></tr></table></figure><p>第四：编辑文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br></pre></td></tr></table></figure><p>第五：执行编辑</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure><p>第六：安装yasm</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure><p>第七: 检测安装是否成功</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yasm --version</span><br></pre></td></tr></table></figure><p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20240109135110267.png" alt="image-20240109135110267"></p></li><li><p>安装nasm源码包</p><p>第一：源码地址</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.nasm.us/pub/nasm/releasebuilds/2.16/nasm-2.16.tar.gz</span><br></pre></td></tr></table></figure><p>第二：解压nasm</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xvf nasm-2.16.tar.gz</span><br></pre></td></tr></table></figure><p>第三：进入解压文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd nasm-2.16</span><br></pre></td></tr></table></figure><p>第四：编辑文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br></pre></td></tr></table></figure><p>第五：执行编辑</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure><p>第六：安装nasm,</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure><p>第七: 检测安装是否成功</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nasm --version</span><br></pre></td></tr></table></figure><p><img src="C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20240109140033445.png" alt="image-20240109140033445"></p></li><li><p>安装libx264</p><p>第一：地址</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://code.videolan.org/videolan/x264/-/archive/master/x264-master.tar.gz</span><br></pre></td></tr></table></figure><p>第二：解压x264, tar xvf x264-master.tar.gz</p><p>第三：进入解压文件, cd x264-master</p><p>第四：编辑文件，</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --enable-shared</span><br></pre></td></tr></table></figure><p>第五：执行编辑，make</p><p>第六：安装x264, </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure><p>第七: 检测安装是否成功， x264 –version</p></li><li><p>安装 libfreetype</p></li><li><p>安装 fribidi</p></li><li><p>安装 fontconfig</p></li><li><p>安装 libass</p></li><li><p>安装ffmpeg</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;FFMPEG安装文档&quot;&gt;&lt;a href=&quot;#FFMPEG安装文档&quot; class=&quot;headerlink&quot; title=&quot;FFMPEG安装文档&quot;&gt;&lt;/a&gt;FFMPEG安装文档&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;在线安装ffmpeg&lt;/p&gt;
+&lt;figure class=</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://blog.github.io/post/0.html"/>
+    <id>https://blog.github.io/post/0.html</id>
+    <published>2024-01-09T09:33:39.103Z</published>
+    <updated>2024-01-09T09:33:39.476Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Mendix应用部署文档"><a href="#Mendix应用部署文档" class="headerlink" title="Mendix应用部署文档"></a><strong>Mendix应用部署文档</strong></h1><ul><li><input disabled="" type="checkbox"> 步骤一(下载m2ee)：</li><li><input disabled="" type="checkbox"> 步骤二(解压m2ee下载安装包):</li><li><input disabled="" type="checkbox"> 步骤三（验证m2ee）</li><li><input disabled="" type="checkbox"> 步骤四（创建mendix应用程序目录）</li><li><input disabled="" type="checkbox"> 步骤五（在根目录创建[.m2ee]目录，存放m2ee.yaml配置文件。）</li><li><input disabled="" type="checkbox"> 步骤六（下载m2ee-tool 工具包）</li><li><input disabled="" type="checkbox"> 步骤七 (解压m2ee-tool工具包)</li><li><input disabled="" type="checkbox"> 步骤八(配置m2ee)</li><li><input disabled="" type="checkbox"> 步骤九（将项目压缩包，格式为.mda的文件上传）</li><li><input disabled="" type="checkbox"> 步骤十（执行m2ee，并解压项目压缩包）</li><li><input disabled="" type="checkbox"> 步骤十一（启动项目）</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Mendix应用部署文档&quot;&gt;&lt;a href=&quot;#Mendix应用部署文档&quot; class=&quot;headerlink&quot; title=&quot;Mendix应用部署文档&quot;&gt;&lt;/a&gt;&lt;strong&gt;Mendix应用部署文档&lt;/strong&gt;&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input </summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="https://blog.github.io/post/4a17b156.html"/>
     <id>https://blog.github.io/post/4a17b156.html</id>
     <published>2024-01-09T07:14:28.134Z</published>
-    <updated>2024-01-09T07:14:28.135Z</updated>
+    <updated>2024-01-09T09:15:01.171Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
